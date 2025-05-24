@@ -1,10 +1,10 @@
 export default function WebhooksPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-primary mb-8">Webhooks Integration</h1>
+    <div className="container mx-auto px-4 py-8 md:py-12"> {/* Added md:py-12 for more vertical space on larger screens */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8">Webhooks Integration</h1>
 
       <section id="introduction" className="mb-12 space-y-4">
-        <h2 className="text-2xl font-semibold text-primary/90">Introduction to Webhooks</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Introduction to Webhooks</h2>
         <p className="text-muted-foreground">
           Webhooks allow your application to receive real-time notifications about events that happen in our email validation service. 
           Instead of polling our API, you can subscribe to events and we'll send an HTTP POST payload to your configured webhook URL when an event occurs.
@@ -15,7 +15,7 @@ export default function WebhooksPage() {
       </section>
 
       <section id="setup" className="mb-12 space-y-4">
-        <h2 className="text-2xl font-semibold text-primary/90">Setting Up a Webhook</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Setting Up a Webhook</h2>
         <p className="text-muted-foreground">
           1. Go to your account dashboard (link to be added).
         </p>
@@ -31,7 +31,7 @@ export default function WebhooksPage() {
       </section>
 
       <section id="event-types" className="mb-12 space-y-4">
-        <h2 className="text-2xl font-semibold text-primary/90">Event Types</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Event Types</h2>
         <p className="text-muted-foreground">We currently support the following event types:</p>
         <ul className="list-disc list-inside text-muted-foreground space-y-2 pl-4">
           <li><code className="bg-muted px-1 py-0.5 rounded">email.validation.succeeded</code>: Triggered when an email is successfully validated via OTP.</li>
@@ -42,7 +42,7 @@ export default function WebhooksPage() {
       </section>
 
       <section id="payload-structure" className="mb-12 space-y-4">
-        <h2 className="text-2xl font-semibold text-primary/90">Payload Structure</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Payload Structure</h2>
         <p className="text-muted-foreground">All webhook events follow a similar JSON structure:</p>
         <pre className="bg-muted p-4 rounded-md text-sm overflow-x-auto"><code>
 {`{
@@ -66,7 +66,7 @@ export default function WebhooksPage() {
       </section>
 
       <section id="best-practices" className="mb-12 space-y-4">
-        <h2 className="text-2xl font-semibold text-primary/90">Best Practices</h2>
+        <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Best Practices</h2>
         <ul className="list-disc list-inside text-muted-foreground space-y-2 pl-4">
           <li><strong>Respond quickly:</strong> Your endpoint should acknowledge receipt of the event by returning a 2xx HTTP status code within a few seconds. If we don't receive a timely success response, we may consider the delivery failed and retry.</li>
           <li><strong>Verify signatures:</strong> Always verify the webhook signature to ensure the request is legitimate.</li>

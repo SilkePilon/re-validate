@@ -57,7 +57,7 @@ export default function PricingPage() {
               <FeatureListItem>Webhook Support</FeatureListItem>
               <FeatureListItem>Email Support</FeatureListItem>
             </ul>
-          </CellContent>
+          </CardContent>
           <CardFooter>
             <Button className="w-full">Choose Pro</Button>
           </CardFooter>
