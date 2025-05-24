@@ -2,146 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   :root {
+    /* Green Theme HSL Variables */
+    --green-50: 140 65% 95%;
+    --green-100: 142 70% 90%;
+    --green-200: 145 70% 80%;
+    --green-300: 148 65% 70%;
+    --green-400: 150 55% 60%;
+    --green-500: 152 50% 50%; /* Main accent */
+    --green-600: 150 45% 40%; /* Main primary */
+    --green-700: 152 40% 30%; 
+    --green-800: 155 45% 20%;
+    --green-900: 158 50% 15%;
+    --green-950: 158 60% 10%;
 
-    --background: 0 0% 100%;
-
-    --foreground: 0 0% 3.9%;
-
+    /* Neutral Colors (Light Theme) */
+    --background: 0 0% 100%; /* Light background */
+    --foreground: 240 10% 3.9%; /* Dark text */
     --card: 0 0% 100%;
-
-    --card-foreground: 0 0% 3.9%;
-
+    --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%; /* Adjusted from example to match typical shadcn light border */
+    --input: 240 5.9% 90%;  /* Adjusted from example */
 
-    --popover-foreground: 0 0% 3.9%;
+    /* Themed Colors (Light Theme) */
+    --primary: var(--green-600);
+    --primary-foreground: var(--green-50);
+    
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --primary: 0 0% 9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96.1%;
-
-    --secondary-foreground: 0 0% 9%;
-
-    --muted: 0 0% 96.1%;
-
-    --muted-foreground: 0 0% 45.1%;
-
-    --accent: 0 0% 96.1%;
-
-    --accent-foreground: 0 0% 9%;
-
+    --accent: var(--green-500);
+    --accent-foreground: var(--green-50);
+    
     --destructive: 0 84.2% 60.2%;
-
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
+    --ring: var(--green-400);
 
-    --input: 0 0% 89.8%;
+    /* Sidebar (Light Theme) */
+    --sidebar-background: var(--green-50);
+    --sidebar-foreground: var(--green-800);
+    --sidebar-primary: var(--green-600);
+    --sidebar-primary-foreground: var(--green-50);
+    --sidebar-accent: var(--green-500);
+    --sidebar-accent-foreground: var(--green-50);
+    --sidebar-border: var(--green-200); /* Themed sidebar border */
+    --sidebar-ring: var(--green-400);   /* Themed sidebar ring */
 
-    --ring: 0 0% 3.9%;
+    /* Chart Colors (Light Theme) */
+    --chart-1: var(--green-500);
+    --chart-2: var(--green-600);
+    --chart-3: var(--green-400);
+    --chart-4: var(--green-700);
+    --chart-5: var(--green-300);
 
-    --chart-1: 12 76% 61%;
+    --radius: 0.5rem;
+  }
 
-    --chart-2: 173 58% 39%;
-
-    --chart-3: 197 37% 24%;
-
-    --chart-4: 43 74% 66%;
-
-    --chart-5: 27 87% 67%;
-
-    --radius: 0.5rem
-  ;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%}
   .dark {
-
-    --background: 0 0% 3.9%;
-
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 3.9%;
-
+    /* Neutral Colors (Dark Theme) */
+    --background: 240 10% 3.9%; /* Dark background */
+    --foreground: 0 0% 98%; /* Light text */
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 3.9%;
-
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%; /* Adjusted from example to match typical shadcn dark border */
+    --input: 240 3.7% 15.9%; /* Adjusted from example */
 
-    --primary: 0 0% 98%;
+    /* Themed Colors (Dark Theme) */
+    --primary: var(--green-500);
+    --primary-foreground: var(--green-950);
 
-    --primary-foreground: 0 0% 9%;
-
-    --secondary: 0 0% 14.9%;
-
+    --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 14.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-
+    --accent: var(--green-400);
+    --accent-foreground: var(--green-950);
+    
+    --destructive: 0 62.8% 30.6%; /* Using prompt's dark destructive */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
+    --ring: var(--green-500);
 
-    --input: 0 0% 14.9%;
-
-    --ring: 0 0% 83.1%;
-
-    --chart-1: 220 70% 50%;
-
-    --chart-2: 160 60% 45%;
-
-    --chart-3: 30 80% 55%;
-
-    --chart-4: 280 65% 60%;
-
-    --chart-5: 340 75% 55%
-  ;
-
-    --sidebar-background: 240 5.9% 10%;
-
-    --sidebar-foreground: 240 4.8% 95.9%;
-
-    --sidebar-primary: 224.3 76.3% 48%;
-
-    --sidebar-primary-foreground: 0 0% 100%;
-
-    --sidebar-accent: 240 3.7% 15.9%;
-
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-
-    --sidebar-border: 240 3.7% 15.9%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%}
+    /* Sidebar (Dark Theme) */
+    --sidebar-background: var(--green-900);
+    --sidebar-foreground: var(--green-100);
+    --sidebar-primary: var(--green-500);
+    --sidebar-primary-foreground: var(--green-50);
+    --sidebar-accent: var(--green-400);
+    --sidebar-accent-foreground: var(--green-50);
+    --sidebar-border: var(--green-700); /* Themed dark sidebar border */
+    --sidebar-ring: var(--green-500);   /* Themed dark sidebar ring */
+    
+    /* Chart Colors (Dark Theme) */
+    --chart-1: var(--green-600);
+    --chart-2: var(--green-500);
+    --chart-3: var(--green-700);
+    --chart-4: var(--green-400);
+    --chart-5: var(--green-800);
+    
+    /* Green shades are already defined globally in :root and will be inherited.
+       No need to redefine --green-50 to --green-950 here unless you want
+       different HSL values specifically for the dark theme, which is not typical. */
+  }
 }
-
-
 
 @layer base {
   * {
