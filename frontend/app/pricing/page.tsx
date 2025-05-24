@@ -16,7 +16,7 @@ export default function PricingPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-primary">Pricing Plans</h1>
         <p className="text-lg text-muted-foreground mt-2">
-          Choose the plan that's right for your needs. Simple, transparent pricing.
+          Choose the plan that&apos;s right for your needs. Simple, transparent pricing.
         </p>
       </div>
 

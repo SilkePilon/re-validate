@@ -7,7 +7,7 @@ export default function WebhooksPage() {
         <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Introduction to Webhooks</h2>
         <p className="text-muted-foreground">
           Webhooks allow your application to receive real-time notifications about events that happen in our email validation service. 
-          Instead of polling our API, you can subscribe to events and we'll send an HTTP POST payload to your configured webhook URL when an event occurs.
+          Instead of polling our API, you can subscribe to events and we&apos;ll send an HTTP POST payload to your configured webhook URL when an event occurs.
         </p>
         <p className="text-muted-foreground">
           Common use cases include updating your local database when an email is successfully validated, or triggering custom workflows based on validation outcomes.
@@ -20,10 +20,10 @@ export default function WebhooksPage() {
           1. Go to your account dashboard (link to be added).
         </p>
         <p className="text-muted-foreground">
-          2. Navigate to the 'Webhooks' section in your settings.
+          2. Navigate to the &apos;Webhooks&apos; section in your settings.
         </p>
         <p className="text-muted-foreground">
-          3. Click 'Add Endpoint' and provide your HTTPS webhook URL.
+          3. Click &apos;Add Endpoint&apos; and provide your HTTPS webhook URL.
         </p>
         <p className="text-muted-foreground">
           <strong>Security:</strong> We sign each webhook event we send using a unique secret key for each endpoint. This signature is passed in the <code className="bg-muted px-1 py-0.5 rounded">X-Webhook-Signature</code> HTTP header. Verify this signature to ensure the request came from us and was not tampered with. Your endpoint secrets are available in your dashboard.
@@ -68,7 +68,7 @@ export default function WebhooksPage() {
       <section id="best-practices" className="mb-12 space-y-4">
         <h2 className="text-xl sm:text-2xl font-semibold text-primary/90">Best Practices</h2>
         <ul className="list-disc list-inside text-muted-foreground space-y-2 pl-4">
-          <li><strong>Respond quickly:</strong> Your endpoint should acknowledge receipt of the event by returning a 2xx HTTP status code within a few seconds. If we don't receive a timely success response, we may consider the delivery failed and retry.</li>
+          <li><strong>Respond quickly:</strong> Your endpoint should acknowledge receipt of the event by returning a 2xx HTTP status code within a few seconds. If we don&apos;t receive a timely success response, we may consider the delivery failed and retry.</li>
           <li><strong>Verify signatures:</strong> Always verify the webhook signature to ensure the request is legitimate.</li>
           <li><strong>Handle retries:</strong> Our system may send the same event more than once if acknowledgement fails. Design your endpoint to be idempotent.</li>
           <li><strong>Use HTTPS:</strong> Always use an HTTPS URL for your webhook endpoint to ensure data is encrypted in transit.</li>

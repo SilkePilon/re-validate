@@ -33,7 +33,7 @@ export default function ContactPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-primary">Get In Touch</h1>
         <p className="text-lg text-muted-foreground mt-2">
-          Have questions or feedback? We'd love to hear from you.
+          Have questions or feedback? We&apos;d love to hear from you.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
         <Card>
           <CardHeader>
             <CardTitle>Send us a Message</CardTitle>
-            <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
+            <CardDescription>Fill out the form below and we&apos;ll get back to you as soon as possible.</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">

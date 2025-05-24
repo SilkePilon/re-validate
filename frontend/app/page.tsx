@@ -53,7 +53,7 @@ export default function Home() {
       <section className="w-full max-w-3xl space-y-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-primary/90">How It Works</h2>
         <ol className="list-decimal list-inside space-y-3 text-muted-foreground bg-card p-6 rounded-lg border shadow-sm text-left"> {/* Added shadow, text-left */}
-          <li>Developer calls our API with the user's email address.</li>
+          <li>Developer calls our API with the user&apos;s email address.</li>
           <li>Our service sends a secure OTP to the provided email.</li>
           <li>User enters the OTP on your frontend, which you verify.</li>
           <li>Email address is confirmed, enhancing user data quality.</li>
